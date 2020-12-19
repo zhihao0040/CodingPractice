@@ -3,7 +3,8 @@
 
 int main(int argc, char** argv){
     if (argc != 2){
-        return 0;
+        printf("Please provide file name");
+        return 1;
     }
     
     char* fileName = argv[1];
@@ -31,5 +32,7 @@ int main(int argc, char** argv){
         }
         // Swap smallest with current
         myTextArray[i], myTextArray[smallestCharIndex] = myTextArray[smallestCharIndex], myTextArray[i];
+        printf("%c", myTextArray[i]);
     }
+    return 0;
 }
