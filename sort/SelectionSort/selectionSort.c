@@ -23,6 +23,7 @@ int main(int argc, char** argv){
 
     fclose(fp);
     
+    char temp;
     // Selection Sort
     int smallestCharIndex; 
     for (int i = 0; i < numOfElems - 1; i++){
@@ -33,7 +34,10 @@ int main(int argc, char** argv){
             }
         }
         // Swap smallest with current
-        myTextArray[i], myTextArray[smallestCharIndex] = myTextArray[smallestCharIndex], myTextArray[i];
+        temp = myTextArray[i];
+        myTextArray[i] = myTextArray[smallestCharIndex];
+        myTextArray[smallestCharIndex] = temp;
+        // myTextArray[i], myTextArray[smallestCharIndex] = myTextArray[smallestCharIndex], myTextArray[i];
         printf("%c\n", myTextArray[i]);
     }
     return 0;
