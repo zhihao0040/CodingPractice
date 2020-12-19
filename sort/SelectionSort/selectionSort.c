@@ -2,6 +2,10 @@
 #include <stdlib.h>
 
 int main(int argc, char** argv){
+    if (argc != 2){
+        return 0;
+    }
+    
     char* fileName = argv[1];
      
     FILE *fp = fopen(fileName, "r");
