@@ -19,6 +19,7 @@ int main(int argc, char** argv){
     // Fill up myTextArray
     for (int i = 0; i < numOfElems; i++){
         fscanf(fp, "%c", myTextArray[i]);
+        printf(myTextArray[i]);
     }
 
     fclose(fp);
