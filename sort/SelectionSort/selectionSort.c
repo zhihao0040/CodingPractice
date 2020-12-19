@@ -26,6 +26,6 @@ int main(int argc, char** argv){
             }
         }
         // Swap smallest with current
-        myTextArray[i], myTextArray[smallestCharIndex] = myTextArray[smallestCharIndex], myTextArray[i]
+        myTextArray[i], myTextArray[smallestCharIndex] = myTextArray[smallestCharIndex], myTextArray[i];
     }
 }
