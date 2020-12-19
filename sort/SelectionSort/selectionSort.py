@@ -33,3 +33,12 @@ print(myTextListTest) # we would expect the 10 to be part of the elements, simpl
 f.close()
 
 # Selection Sort
+smallestCharIndex = 0
+for i in range(numOfElems - 1):
+    smallestCharIndex = i
+    for j in range(i + 1, numOfElems):
+        if (myTextList[j] < myTextList[smallestCharIndex]): # strictly smaller, not <= because we want to preserve order.
+            smallestCharIndex = j
+    
+    # swap smallest with current
+    myTextList[i], myTextList[smallestCharIndex] = myTextList[smallestCharIndex], myTextList[i]
