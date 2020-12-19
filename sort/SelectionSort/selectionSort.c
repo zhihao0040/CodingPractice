@@ -19,11 +19,13 @@ int main(int argc, char** argv){
     // Fill up myTextArray
     for (int i = 0; i < numOfElems; i++){
         fscanf(fp, "%c", &myTextArray[i]);
-        printf("%c\n", myTextArray[i]);
+        // printf("%c\n", myTextArray[i]);
     }
 
     fclose(fp);
-    
+
+	// Open file for writing
+    fp = fopen("selectionSortCOutput.txt", "w");
     char temp;
     // Selection Sort
     int smallestCharIndex; 
@@ -39,7 +41,14 @@ int main(int argc, char** argv){
         myTextArray[i] = myTextArray[smallestCharIndex];
         myTextArray[smallestCharIndex] = temp;
         // myTextArray[i], myTextArray[smallestCharIndex] = myTextArray[smallestCharIndex], myTextArray[i];
-        printf("%c ", myTextArray[i]);
+        // printf("%c ", myTextArray[i]);
+		// Write to file rather than print
+		fprintf(fp, "%c\n", myTextArray[i]);
     }
+
+    
+	
+    fclose(fp);
+
     return 0;
 }
