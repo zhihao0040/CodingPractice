@@ -50,9 +50,11 @@ int main(int argc, char** argv){
 			fprintf(fp, "%c\n", myTextArray[i + 1]);
 		}
     }
+	
 
     printf("myTextArray[0] = %c\n", myTextArray[0]);
 	
+	// remember to close file
     fclose(fp);
 
     return 0;
