@@ -47,5 +47,5 @@ print(myTextList)
 
 f = open("selectionSortPyOutput.txt", "w")
 for i in range(numOfElems):
-    f.write(myTextList[i])
+    f.write(myTextList[i] + "\n")
 
