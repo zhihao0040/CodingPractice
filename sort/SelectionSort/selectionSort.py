@@ -14,7 +14,7 @@ myTextList = [0] * numOfElems # this is a list, not an array. Think of lists as 
 # Fill up myTextList
 for i in range(numOfElems):
     myTextList[i] = f.readline().strip() # strip off \n, the newline character
-print(myTextList)
+#print(myTextList)
 f.close()
 
 # similarly, rather than doing this, since myTextList is a list and not an array, we no longer need the number
@@ -42,3 +42,10 @@ for i in range(numOfElems - 1):
     
     # swap smallest with current
     myTextList[i], myTextList[smallestCharIndex] = myTextList[smallestCharIndex], myTextList[i]
+
+print(myTextList)
+
+f = open("selectionSortPyOutput.txt", "w")
+for i in range(numOfElems):
+    f.write(myTextList[i])
+
