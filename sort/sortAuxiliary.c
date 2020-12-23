@@ -1,7 +1,7 @@
-#include "foo.h"
+#include "sortAuxiliary.h"
 #include <stdio.h>
 
-char* getFileDataIntoArray(char* fileName){
+FileData getFileData(char* fileName){
 	FILE *fp = fopen(fileName, "r");
 
     int numOfElems;
@@ -16,6 +16,8 @@ char* getFileDataIntoArray(char* fileName){
     }
 
     fclose(fp);
-
-    return myTextArray;	
+    FileData fd;
+    fd.numOfElems = numOfElems;
+    fd.textArray = myTextArray;
+    return fd;	
 }
