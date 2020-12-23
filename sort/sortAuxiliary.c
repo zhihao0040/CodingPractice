@@ -1,5 +1,6 @@
 #include "sortAuxiliary.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 FileData getFileData(char* fileName){
 	FILE *fp = fopen(fileName, "r");
