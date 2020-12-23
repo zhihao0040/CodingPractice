@@ -26,13 +26,13 @@ int main(int argc, char** argv){
     for (int i = 1; i < fD.numOfElems; i++){
         j = i - 1;
         key = fD.textArray[i];
-        while (j > 0 && fD.textArray[j] > key){
+        while (j >= 0 && fD.textArray[j] > key){
             fD.textArray[j + 1] = fD.textArray[j];
             j -= 1;
         }
         fD.textArray[j + 1] = key;
     }
-    writeToFile(fileName, fD);
+    writeToFile("insertSortCOutput.txt", fD);
     return 0;
 }
 
