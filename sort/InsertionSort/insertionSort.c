@@ -32,7 +32,8 @@ int main(int argc, char** argv){
         }
         fD.textArray[j + 1] = key;
     }
-    
+    writeToFile(fileName, fD);
+    return 0;
 }
 
 // char* getFileDataIntoArray(char* fileName){
