@@ -9,5 +9,6 @@ struct FileData {
 typedef struct FileData FileData;
 
 FileData getFileData(char* fileName);
+void writeToFile(char* fileName, FileData fD);
 
 #endif

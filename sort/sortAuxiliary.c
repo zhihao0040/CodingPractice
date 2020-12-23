@@ -21,3 +21,11 @@ FileData getFileData(char* fileName){
     fd.textArray = myTextArray;
     return fd;	
 }
+
+void writeToFile(char* fileName, FileData fD){
+    FILE *fp = fopen(fileName, "w");
+    for (int i = 0; i < fD.numOfElems; i++){
+        fprintf(fp, "%c\n", fD.textArray[i]);
+    }
+    fclose(fp);
+}

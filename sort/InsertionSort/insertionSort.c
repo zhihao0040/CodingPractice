@@ -32,7 +32,7 @@ int main(int argc, char** argv){
         }
         fD.textArray[j + 1] = key;
     }
-
+    
 }
 
 // char* getFileDataIntoArray(char* fileName){
